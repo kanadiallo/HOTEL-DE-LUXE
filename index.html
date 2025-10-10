@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôtel de Luxe Étoile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="logo">Hôtel Étoile</div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#chambres">Chambres</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section d'accueil avec image de fond -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue à l'Hôtel Étoile</h1>
+            <p>Le luxe et le confort au cœur de la ville</p>
+            <a href="#chambres" class="btn">Voir nos chambres</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="section">
+        <h2>À propos de nous</h2>
+        <p>Notre hôtel 5 étoiles vous propose une expérience inoubliable, avec des services haut de gamme et une attention aux moindres détails.</p>
+    </section>
+
+    <!-- Section Chambres -->
+    <section id="chambres" class="section">
+        <h2>Nos chambres</h2>
+        <div class="room-list">
+            <div class="room">
+                <h3>Suite Royale</h3>
+                <p>Vue sur la mer, jacuzzi privé, service 24h/24.</p>
+            </div>
+            <div class="room">
+                <h3>Chambre Deluxe</h3>
+                <p>Confort moderne avec petit déjeuner inclus.</p>
+            </div>
+            <div class="room">
+                <h3>Chambre Classique</h3>
+                <p>Élégante et fonctionnelle pour tous les budgets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Bouton retour en haut -->
+    <button id="btnTop" title="Retour en haut">↑</button>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Hôtel Étoile. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+🎨 2. CSS – style.css
+css
+Copier le code
+/* Style de base et reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* En-tête avec menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+/* Hero section avec image de fond */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1600047503150-6768d4b1c84d?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6c300;
+}
+
+/* Sections générales */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.room {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Formulaire de contact */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #e6c300;
+}
+
+/* Bouton retour en haut */
+#btnTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+/* Pied de page */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+🧠 3. JavaScript – script.js
+javascript
+Copier le code
+// Bouton "Retour en haut"
+const btnTop = document.getElementById("btnTop");
+
+// Affiche le bouton si on descend de 300px
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 300) {
+        btnTop.style.display = "block";
+    } else {
+        btnTop.style.display = "none";
+    }
+};
+
+// Scroll en haut de la page quand on clique
+btnTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
